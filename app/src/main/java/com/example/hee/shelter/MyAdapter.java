@@ -61,7 +61,10 @@ public class MyAdapter extends BaseAdapter {
             //레이아웃 초기화 불러옴 , 콘텍스트 불러오고 뷰객체 만듦
             LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(mResource, parent, false);
+
         }
+
+        //-main---------
         //아이템 객체 정의  Set image
         ImageView Image = (ImageView) convertView.findViewById(R.id.shelterImageView);
         Image.setImageResource(mItems.get(position).mShelterImageView);
@@ -77,6 +80,10 @@ public class MyAdapter extends BaseAdapter {
         // Set 제공자
         TextView provider = (TextView) convertView.findViewById(R.id.shelterProviderView);
         provider.setText(mItems.get(position).nShelterProviderView);
+
+
+
+
 
         return convertView;
     }
